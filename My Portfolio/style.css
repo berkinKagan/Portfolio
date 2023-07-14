@@ -4,6 +4,9 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 p{
   color: white;
 }
@@ -333,7 +336,9 @@ ul li a:hover::before{
       opacity: 1;
     }
   }
-  
+  #skills{
+    padding-top: 10%;
+  }
 
   .ag-format-container {
     width: 1142px;
@@ -351,6 +356,7 @@ ul li a:hover::before{
     align-items: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    
   
     padding: 50px 0;
   }
@@ -359,30 +365,37 @@ ul li a:hover::before{
     flex-basis: calc(33.33333% - 30px);
   
     margin: 0 15px 30px;
-  
+    
     overflow: hidden;
   
     border-radius: 28px;
   }
+  .ag-courses-item:hover{
+   
+  }
   .ag-courses-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: #121212;
-  
+    background-color: transparent;
+    
     overflow: hidden;
-  
+    text-decoration: none;
     position: relative;
   }
   .ag-courses-item_link:hover,
   .ag-courses-item_link:hover .ag-courses-item_date {
     text-decoration: none;
     color: #FFF;
+    
   }
   .ag-courses-item_link:hover .ag-courses-item_bg {
     -webkit-transform: scale(10);
     -ms-transform: scale(10);
     transform: scale(10);
+    background-color: #ff65bd;
   }
+  
+  
   .ag-courses-item_title {
     min-height: 87px;
     margin: 0 0 25px;
@@ -392,7 +405,7 @@ ul li a:hover::before{
     font-weight: bold;
     font-size: 30px;
     color: #FFF;
-  
+    
     z-index: 2;
     position: relative;
   }
@@ -405,8 +418,7 @@ ul li a:hover::before{
   }
   .ag-courses-item_date {
     font-weight: bold;
-    color: #7612da;
-  
+    
     -webkit-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease
@@ -414,34 +426,23 @@ ul li a:hover::before{
   .ag-courses-item_bg {
     height: 128px;
     width: 128px;
-    background: linear-gradient(to right, #333399, #FF00CC);
-  
+    background: #ffe6ff;
+    box-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
     z-index: 1;
     position: absolute;
     top: -75px;
     right: -75px;
   
     border-radius: 50%;
-  
+    
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
   }
-  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-    background-color: #3ecd5e;
-  }
-  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-    background-color: #e44002;
-  }
-  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-    background-color: #952aff;
-  }
-  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-    background-color: #cd3e94;
-  }
-  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-    background-color: #4c49ea;
-  }
+  
+  
   
   
   
@@ -552,6 +553,7 @@ ul li a:hover::before{
       text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
         -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
         0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        animation: shine 2s forwards, flicker 3s infinite;
   }
   .left div p{
     color: lightgray;
