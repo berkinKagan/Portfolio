@@ -21,6 +21,80 @@ body{
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
   
 }
+@keyframes slideInLeft{
+  from{
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight{
+  from{
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInTop{
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+@media only screen and (min-width: 650px){
+  .intro{
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    font-size: 40px;
+  }
+  .aboutText{
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+  #skills{
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+  #contact{
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+}
 #header{
     width: 100%;
     height: 100vh;
@@ -590,6 +664,7 @@ ul li a:hover::before{
   }
   .left div .links:hover{
     color: #ff004f;
+    transform: translateY(-5px);
   }
   .left div p{
     color: lightgray;
