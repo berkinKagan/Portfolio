@@ -251,9 +251,11 @@
       
     </div>
     <div style="padding: 3%;" class="copyright">
-      <p style="color: darkgray;">Copyright © Berkin. 2023</p>
+      <p id="copyright" style="color: darkgray;"></p>
     </div>
     <script>
+        
+
         var eduBtn = document.getElementById("edu");
         var expBtn = document.getElementById("exp");
 
@@ -263,7 +265,12 @@
         var edu = document.getElementById("edu");
         var exp = document.getElementById("exp");
         
-        
+        var copyright = document.getElementById("copyright");
+        var year = new Date().getFullYear();
+        var message = "Copyright © Berkin. " + year;
+
+        copyright.innerHTML = message;
+
 
         eduDiv.style.display = "none";
         expDiv.style.display = "none";
