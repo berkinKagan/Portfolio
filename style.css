@@ -1,6 +1,86 @@
+/* More Animations */
+.pop-in {
+  animation: popIn 0.7s cubic-bezier(.5,1.8,.5,1) forwards;
+  opacity: 0;
+  transform: scale(0.95);
+}
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  80% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.fade-in-delayed {
+  opacity: 0;
+  animation: fadeInUp 1.5s 0.5s ease forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideInRight 1s ease forwards;
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 :root{
   --bg:#0b0d10;--card:#11151b;--muted:#9aa4b2;--text:#e8edf2;
   --brand:#45a3ff;--brand-2:#7cd1ff;--border:#1c2430;--shadow:0 10px 30px rgba(0,0,0,.35)
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideInLeft 1s ease forwards;
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Animated underline only for links, not buttons */
+a:not(.btn) {
+  position: relative;
+  transition: color 0.3s;
+}
+a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 2px;
+  background: var(--brand);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+a:not(.btn):hover::after {
+  transform: scaleX(1);
+}
+
+.btn {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
