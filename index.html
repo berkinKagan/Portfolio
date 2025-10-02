@@ -1,321 +1,155 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berkin Kağan Ateş • Portfolio</title>
+  <meta name="description" content="Portfolio of Berkin Kağan Ateş — Full-stack engineer with experience in Python, FastAPI, Django, React, TypeScript, and cloud (AWS, Azure)." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <script src="https://kit.fontawesome.com/fab0f71904.js" crossorigin="anonymous"></script>
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <header class="site-header">
+    <nav class="nav">
+      <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">☰</button>
+      <ul id="navMenu" class="nav__list">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a class="btn btn--primary" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    
-    <div id="header">
-        <div  style="color: white;" class="container">
-            <h1 class="intro">Hello, I am <span style="color: #ff004f"> Berkin</span> from Turkey</h1>
-            <br>
-            <h1 class="intro">Computer science student in <span style="color: #ff004f">Bilkent University</span> </h1>
+  <main id="top">
+    <section class="hero container">
+      <div class="hero__content">
+        <h1 class="hero__title">Berkin Kağan Ateş</h1>
+        <p class="hero__subtitle">Computer Science Student • Full-Stack Engineer • Python / FastAPI / Django • React / TypeScript • Cloud & DevOps</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener" download>Download CV (PDF)</a>
+          <a class="btn btn--ghost" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="#contact">Get in Touch</a>
         </div>
-        <div class="image">
-            <img src="images/bck.png" alt="">
-        </div>
-    </div>
-    <div id="about">
-        <div style="width: 20%;" class="image2">
-            <img style="width: 130%;" src="images/abt5.png" alt="">
-        </div>
-        <div class="aboutText">
-            <div class="sign">
-                <span class="fast-flicker"></span>About Me<span class="flicker"></span>
-              </div>
-            <br>
-            <br>
-            <p style="color: lightgray; line-height: 200%;"> I'm a computer science student at Bilkent University.
-                I'm now preparing to launch my new start-up project, "Gidelimm," a web application. I'm also a
-                passionate event planner and Huawei Student Developers campus ambassador at my current school. Nowadays, I am in Denmark now for my exchange program.</p>
-                <br>
-                <br>
-                <ul>
-                    <li><p id="edu" class="tab-links" >Education</p></li>
-                    <li><p id="exp" class="tab-links" >Experience</p></li>
-                   
-                    
-                </ul>
-                <br>
-                <br>
-                <div id="eduDiv" class="eduDiv">
-                  <p style= "font-weight: bold; color:#ff004f;">Jan-July 2024</p>
-                  <br>
-                  <p style="color: lightgray;">Roskilde University</p>
-                    <br>
-                    <p style="color: lightgray;">Exchange Student</p>
-                    <br>
-                    <p style= "font-weight: bold; color:#ff004f;">2021-2026</p>
-                    <br>
-                    <p style="color: lightgray;">Bilkent University</p>
-                    <br>
-                    <p style="color: lightgray;">CGPA: 3.60</p>
-                    <br>
-                    <br>
-                    <p style="font-weight: bold; color: #ff004f;">2017-2021</p>
-                    <br>
-                    <p style="color: lightgray;">Özkent Akbilek Science High School</p>
-                </div>
-                <div id="expDiv" class="expDiv">
-                    
-                    <h3 style="color: #ff004f;">HUAWEI Student Developers (HSD) Türkiye</h3>
-                    <br>
-                    <h3 style="color: lightgray;">Campus Ambassador</h3>
-                   
-                    <br>
-                    <br>
-                    
-                    <h3 style="color: #ff004f;">Fiverr</h3>
-                    <br>
-                    <h3 style="color: lightgray;">Freelance Web Developer</h3>
-                  
-                    <br>
-                    <br>
-                    
-                    <h3 style="color: #ff004f; ">Bilkent Audit and Consulting Club</h3>
-                    <br>
-                    <h3 style="color: lightgray;">Organization Team Member</h3>
-                    
-                    <br>
-                </div>
-                
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br>
-    
-  
-    
-    <div id="skills" onscroll="start()">
-        <div class="sign">
-            <span class="fast-flicker"></span>Skills<span class="flicker"></span>
-          </div>
-        <div class="ag-format-container">
-            <div class="ag-courses_box">
-              <div class="ag-courses_item">
-                <a  class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    Backend Programming
-                  </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <p>Java</p>
-                    <br>
-                    <p>Python-Django</p>
-                    <br>
-                    <p>C# - C++</p>
-                  </div>
-                </a>
-              </div>
-              
-                <div class="ag-courses_item">
-                  <a  class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Services - Databases
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      <p>SQLite - Postgre</p>
-                      <br>
-                      <p>MySQL</p>
-                      <br>
-                      <p>Firebase</p>
-                    </div>
-                  </a>
-                </div>
-              
-              
-                <div class="ag-courses_item">
-                  <a  class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg"></div>
-            
-                    <div class="ag-courses-item_title">
-                      Hardware
-                    </div>
-            
-                    <div class="ag-courses-item_date-box">
-                      <p>System Verilog</p>
-                      <br>
-                      <p>MIPS Assembly</p>
-                      <br>
-                      <p>RTL Design</p>
-                    </div>
-                  </a>
-                </div>
-              <div class="ag-courses_item">
-                <a  class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    Frontend Programming
-                  </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <p>HTML - CSS</p>
-                    
-                    <br>
-                    <p>JS</p>
-                    <br>
-                    <p>React</p>
-                    
-                  </div>
-                  
-                </a>
-              </div>
-              <div class="ag-courses_item">
-                <a  class="ag-courses-item_link">
-                  <div class="ag-courses-item_bg"></div>
-          
-                  <div class="ag-courses-item_title">
-                    Languages
-                  </div>
-          
-                  <div class="ag-courses-item_date-box">
-                    <p>English (Fluent)</p>
-                    <br>
-                    <p>Turkish (Native)</p>
-                    <br>
-                    <p style="opacity: 0;">a</p>
-                  </div>
-                </a>
-              </div>
-             
-              </div>
-          
-            </div>
-          </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br>
-    <div id="contact">
-      <div class="sign">
-        <span class="fast-flicker"></span>Contact Me<span class="flicker"></span>
+        <ul class="meta">
+          <li>Etimesgut, Ankara, Türkiye</li>
+          <li><a href="mailto:kagan.ates@ug.bilkent.edu.tr">kagan.ates@ug.bilkent.edu.tr</a> · <a href="mailto:berkinkagan03@gmail.com">berkinkagan03@gmail.com</a></li>
+          <li><a target="_blank" href="http://www.linkedin.com/in/berkin-ka%C4%9Fan-ate%C5%9F">LinkedIn</a> · <a target="_blank" href="https://github.com/berkinKagan">GitHub</a></li>
+        </ul>
       </div>
-      <br><br><br>
-      <div class="container">
-        <div style="padding-left: 10%;" class="left">
-          <div class="mail">
-            <a style="color: #ff004f;"><i class="fa-regular fa-envelope fa-2xl"></i></a>
-            <p>kagan.ates@ug.bilkent.edu.tr</p>
-          </div>
-          <br>
-          <br>
-          <h2 class="social" style=" margin-left:22%; color:white;">Social Links</h2>
-          <div class="linkedin">
-            <a class="links" href="https://www.linkedin.com/in/berkin-kağan-ateş/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-            <a class="links" href="https://github.com/berkinKagan"><i class="fa-brands fa-github fa-2xl"></i></a>
-            <a class="links" href="https://www.instagram.com/berkinkagan/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-          </div>
-          
-        
-          <div class="downloadCw">
-            <a class="dwCv" style="  background:#ff004f;  font-weight:bold; border-radius:5px;" href="images/Simple Resume.pdf" download="">Download CV</a>
-          </div>
-          <div></div>
+    </section>
+
+    <section id="education" class="section container">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <h3>Roskilde University — Faculty of Natural Sciences</h3>
+          <p class="muted">Exchange Student in Computer Science (GPA 3.56/4.00) • Jan–Jul 2024 • Roskilde, Denmark</p>
         </div>
-        <div class="right">
-          <form name="submit-to-google-sheet" id="submit-to-google-sheet" >
-            <input id="name" name="Name" placeholder="Your Full Name" type="text">
-            <br><br>
-            <input id="mail" type="text" name="Email" placeholder="Your E-mail" >
-            <br><br><br>
-            <textarea id = "message" name="Message" name="Message" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
-            <br>
-            <br><br><br>
-            <button type="submit" class="submit">Submit</button>
-            <br><br><br>
-          </form>
-          <p style="color: lightgreen;" id="msg"></p>
-          
+        <div class="timeline__item">
+          <h3>Bilkent University — Faculty of Engineering</h3>
+          <p class="muted">B.S. in Computer Science (CGPA 3.57/4.00) • 2021–Present • Ankara, Türkiye</p>
         </div>
-        
+        <div class="timeline__item">
+          <h3>Özkent Akbilek Science High School</h3>
+          <p class="muted">Science/Mathematics • 2017–2021 • Nationwide Exam Rank: 2207 / 2.4M (2021)</p>
+        </div>
       </div>
-      
-      
+    </section>
+
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <div class="cards">
+        <article class="card">
+          <header class="card__head">
+            <h3>Web Frontend Engineer — Commencis</h3>
+            <span class="pill">Jul 2025 – Aug 2025</span>
+          </header>
+          <ul class="list">
+            <li>Developed and optimized responsive web apps with modern JavaScript frameworks.</li>
+            <li>Improved performance and UX across devices with component-based design.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <header class="card__head">
+            <h3>Full-Stack Candidate Engineer — akdogan.tech</h3>
+            <span class="pill">May 2024 – Present</span>
+          </header>
+          <ul class="list">
+            <li>Delivered backend (FastAPI/Django), frontend (React/TS), and database layers end-to-end.</li>
+            <li>Built scalable web solutions aligned with business goals.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <header class="card__head">
+            <h3>Freelance Web Developer — Fiverr</h3>
+            <span class="pill">Jan 2023 – Feb 2024</span>
+          </header>
+          <ul class="list">
+            <li>Created responsive personal websites and portfolios with animation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>CoddyBuddy</h3>
+          <p>Web app that helps programmers find teammates for project crews.</p>
+          <a class="project__link" target="_blank" href="https://github.com/berkinKagan/CoddyBuddy">GitHub →</a>
+        </article>
+        <article class="project">
+          <h3>RUChatbot</h3>
+          <p>Django + TensorFlow chatbot for new Roskilde University students with NLU intent detection.</p>
+          <a class="project__link" target="_blank" href="https://github.com/berkinKagan/RUChatbot">GitHub →</a>
+        </article>
+        <article class="project">
+          <h3>WarMan</h3>
+          <p>Warehouse optimization via image processing. 2nd place in Dincer Hackathon.</p>
+          <a class="project__link" target="_blank" href="https://github.com/berkinKagan/DincerHackathon">GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h4>Programming</h4><p>Python, Java, C++, C#</p></div>
+        <div><h4>Web</h4><p>Django, FastAPI, Flask, React, TypeScript, JavaScript</p></div>
+        <div><h4>Databases</h4><p>MySQL, PostgreSQL, Redis</p></div>
+        <div><h4>Cloud & DevOps</h4><p>AWS, Azure, Firebase, Docker, Linux</p></div>
+        <div><h4>Languages</h4><p>Turkish (native), English (professional working proficiency)</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="btn btn--primary" href="mailto:berkinkagan03@gmail.com">Email Me</a>
+        <a class="btn btn--ghost" target="_blank" href="http://www.linkedin.com/in/berkin-ka%C4%9Fan-ate%C5%9F">LinkedIn</a>
+        <a class="btn btn--ghost" target="_blank" href="https://github.com/berkinKagan">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <small>© <span id="year"></span> Berkin Kağan Ateş</small>
     </div>
-    <div style="padding: 3%;" class="copyright">
-      <p id="copyright" style="color: darkgray;"></p>
-    </div>
-    <script>
-        
+  </footer>
 
-        var eduBtn = document.getElementById("edu");
-        var expBtn = document.getElementById("exp");
-
-        var eduDiv = document.getElementById("eduDiv");
-        var expDiv = document.getElementById("expDiv")
-
-        var edu = document.getElementById("edu");
-        var exp = document.getElementById("exp");
-        
-        var copyright = document.getElementById("copyright");
-        var year = new Date().getFullYear();
-        var message = "Copyright © Berkin. " + year;
-
-        copyright.innerHTML = message;
-
-
-        eduDiv.style.display = "none";
-        expDiv.style.display = "none";
-
-        eduBtn.addEventListener("click",function(){
-            eduDiv.style.display = "inline";
-            expDiv.style.display = "none";
-            edu.classList.add("active-link");
-            exp.classList.remove("active-link");
-            
-            
-            expBtn.style.color = "lightgray";
-            
-                   
-        });
-        expBtn.addEventListener("click",function(){
-            expDiv.style.display = "inline";
-            eduDiv.style.display = "none";
-            exp.classList.add("active-link");
-            edu.classList.remove("active-link");
-            
-            eduBtn.style.color = "lightgray";
-            
-        });
-
-       
-    </script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbx-s4XT8PVH_hXoCCJfinXxh_4k-T5156xDmsuRbgRsSM8BTnODPTv9Ku7CKsWmpZAxqw/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg");
-      
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message Sent Successfully!"
-            setTimeout(function(){
-              msg.innerHTML = ""
-            },5000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
